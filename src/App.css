@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* GRID */
+/* 
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+  }
+} */
