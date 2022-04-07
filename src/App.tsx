@@ -11,25 +11,24 @@ function App() {
 
 	return (
 		<div className='App'>
-			<h1 style={{ textAlign: 'center', marginTop: '16px' }}>Charts POC</h1>
+			<h1 style={{ textAlign: 'center', margin: '16px 0' }}>Charts POC</h1>
 			<div
 				style={{
 					display: 'flex',
 					justifyContent: 'space-evenly',
 					alignItems: 'center',
 					flexWrap: 'wrap',
-					height: '50vh',
-					width: '100vw',
+					gap: '20px',
 				}}
 				className='grid'
 			>
 				<div>
 					<h2>Design</h2>
-					<img src={FigmaImage} width={400} height={300} />
+					<img src={FigmaImage} width={300} height={200} />
 				</div>
 				<div>
 					<h2>Visx</h2>
-					<ParentSize>{() => <Visx width={400} height={300} />}</ParentSize>
+					<ParentSize>{() => <Visx width={300} height={200} />}</ParentSize>
 				</div>
 				<div>
 					<h2>Recharts</h2>
@@ -41,6 +40,7 @@ function App() {
 					display: 'flex',
 					justifyContent: 'center',
 					width: '100vw',
+					marginTop: '16px',
 				}}
 			>
 				<button
