@@ -26,8 +26,8 @@ export const ReachrtsPOC: React.VFC = () => {
 			<div
 				style={{
 					backgroundColor: '#F1F4F9',
-					width: '400px',
-					height: '300px',
+					width: '300px',
+					height: '200px',
 				}}
 			>
 				<ResponsiveContainer>
@@ -88,6 +88,7 @@ export const ReachrtsPOC: React.VFC = () => {
 							strokeWidth={1}
 							fillOpacity={1}
 							fill='url(#colorUv)'
+							animationDuration={700}
 						/>
 					</AreaChart>
 				</ResponsiveContainer>
