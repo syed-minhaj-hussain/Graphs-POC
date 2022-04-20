@@ -39,7 +39,7 @@ function App() {
           <Route
             path="/visx"
             element={
-              <ParentSize>{() => <Visx width={300} height={200} />}</ParentSize>
+              <ParentSize>{() => <Visx width={340} height={200} />}</ParentSize>
             }
           />
         </Routes>
