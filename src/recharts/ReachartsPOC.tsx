@@ -29,7 +29,7 @@ export const ReachrtsPOC: React.VFC = () => {
           height: "250px",
         }}
       >
-        <ResponsiveContainer width={340}>
+        <ResponsiveContainer width={400}>
           <AreaChart
             height={300}
             data={myData.slice(contextValue?.value)}
