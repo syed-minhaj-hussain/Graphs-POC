@@ -31,7 +31,7 @@ export const ReachrtsPOC: React.VFC = () => {
       >
         <ResponsiveContainer width={350}>
           <AreaChart
-            height={300}
+            height={320}
             data={myData.slice(contextValue?.value)}
             //   data={myData.concat(myData.slice(0, 900))}
             margin={{ top: 10, bottom: 1 }}
