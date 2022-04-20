@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ValueProvider } from "./context/ValueContext";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ValueProvider>
-      <App />
-    </ValueProvider>
+    <Router>
+      <ValueProvider>
+        <App />
+      </ValueProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
