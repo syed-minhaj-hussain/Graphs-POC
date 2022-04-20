@@ -18,7 +18,7 @@ export const ReachrtsPOC: React.VFC = () => {
     const newDate = date.slice(0, 10);
     return { newDate, close };
   });
-  //   console.log(myData.length);
+  console.log(myData.slice(0, contextValue?.value).length);
   //   console.log(myData.slice(contextValue?.value));
 
   return (
@@ -29,7 +29,7 @@ export const ReachrtsPOC: React.VFC = () => {
           height: "250px",
         }}
       >
-        <ResponsiveContainer width={380}>
+        <ResponsiveContainer width={360}>
           <AreaChart
             height={300}
             data={myData.slice(contextValue?.value)}
