@@ -64,7 +64,8 @@ export const ReachrtsPOC: React.VFC = () => {
                           fontSize: "0.75rem",
                           color: "white",
                           borderRadius: "8px",
-                          paddingRight: "0rem",
+                          paddingRight: "0.5rem",
+                          marginTop: "-1rem",
                         }}
                       >
                         <p style={{ marginBottom: "0.1rem" }}>
