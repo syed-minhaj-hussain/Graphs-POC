@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1 style={{ textAlign: "center", margin: "16px 0" }}>Charts POC</h1> */}
       <div
         style={{
           display: "flex",
@@ -47,11 +46,12 @@ function App() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           width: "100vw",
           marginTop: "1px",
           backgroundColor: "#F1F4F9",
           padding: "0.5rem",
+          alignItems: "center",
         }}
       >
         <button
@@ -60,7 +60,7 @@ function App() {
             border: `0.1rem solid #27ABA7`,
             color: selected === "1m" ? "#FFFFFF" : "#27ABA7",
             backgroundColor: selected === "1m" ? "#27ABA7" : "#F1F4F9",
-            marginRight: "1rem",
+            // marginRight: "1rem",
           }}
           onClick={() => {
             setSelected("1m");
@@ -75,7 +75,7 @@ function App() {
             border: `0.1rem solid #27ABA7`,
             color: selected === "6m" ? "#FFFFFF" : "#27ABA7",
             backgroundColor: selected === "6m" ? "#27ABA7" : "#F1F4F9",
-            marginRight: "1rem",
+            // marginRight: "1rem",
           }}
           onClick={() => {
             setSelected("6m");
@@ -90,7 +90,7 @@ function App() {
             border: `0.1rem solid #27ABA7`,
             color: selected === "1y" ? "#FFFFFF" : "#27ABA7",
             backgroundColor: selected === "1y" ? "#27ABA7" : "#F1F4F9",
-            marginRight: "1rem",
+            // marginRight: "1rem",
           }}
           onClick={() => {
             setSelected("1y");
@@ -105,7 +105,7 @@ function App() {
             border: `0.1rem solid #27ABA7`,
             color: selected === "3y" ? "#FFFFFF" : "#27ABA7",
             backgroundColor: selected === "3y" ? "#27ABA7" : "#F1F4F9",
-            marginRight: "1rem",
+            // marginRight: "1rem",
           }}
           onClick={() => {
             setSelected("3y");
@@ -120,7 +120,7 @@ function App() {
             border: `0.1rem solid #27ABA7`,
             color: selected === "5y" ? "#FFFFFF" : "#27ABA7",
             backgroundColor: selected === "5y" ? "#27ABA7" : "#F1F4F9",
-            marginRight: "1rem",
+            // marginRight: "1rem",
           }}
           onClick={() => {
             setSelected("5y");
