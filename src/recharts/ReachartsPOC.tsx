@@ -48,7 +48,7 @@ export const ReachrtsPOC: React.VFC = () => {
               //   domain={[myData[0].close, myData[myData.length - 1].close]}
             />
             <Tooltip
-              cursor={{ stroke: "#7B67C1", strokeWidth: 1 }}
+              cursor={{ stroke: "#7B67C1", strokeWidth: 1.5 }}
               position={{ x: 10, y: 10 }}
               content={({ active, label, payload }) => {
                 return (
@@ -84,7 +84,7 @@ export const ReachrtsPOC: React.VFC = () => {
               type="monotone"
               dataKey="close"
               stroke="#8884d8"
-              strokeWidth={1}
+              strokeWidth={1.5}
               fillOpacity={1}
               fill="url(#colorUv)"
               animationDuration={700}
