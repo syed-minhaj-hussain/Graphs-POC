@@ -17,10 +17,7 @@ function App() {
       console.log({ event }, event.data);
       setOrigin(event.data.message);
     });
-    document.addEventListener("message", (event) => {
-      console.log({ event }, event.data);
-      setOrigin(event.data.message);
-    });
+
     // document.addEventListener("load", (event) => {
     //   console.log(event);
     // });
