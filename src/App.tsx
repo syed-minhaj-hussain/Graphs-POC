@@ -12,7 +12,7 @@ function App() {
   const contextValue = useValue();
 
   useEffect(() => {
-    window.addEventListener("message", (event) => {
+    window.addEventListener("load", (event) => {
       console.log({ event });
     });
   });
