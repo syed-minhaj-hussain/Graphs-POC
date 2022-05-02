@@ -16,6 +16,7 @@ function App() {
     window.addEventListener("message", (event) => {
       console.log({ event }, event.data);
       setOrigin(event.data.message);
+      alert(event.data);
     });
 
     // document.addEventListener("load", (event) => {
