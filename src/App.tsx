@@ -92,7 +92,7 @@ function App() {
           />
         </Routes>
       </div>
-      <h1>{data[0].value} Data</h1>
+      <h1>{data && data[0].value} Data</h1>
       <div
         style={{
           display: "flex",
