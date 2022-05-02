@@ -36,10 +36,10 @@ function App() {
     document.addEventListener("nativeAppEvent", (event) => {
       const myEvent = event as CustomEvent<any>;
       console.log({ myEvent });
-      const data = myEvent.detail.navChart;
+      const data = JSON.parse(myEvent.detail.navChart);
       console.log(data);
       setData(data);
-      alert(JSON.stringify(myEvent.detail));
+      alert(data[0].value);
     });
 
     // getInjectableJSMessage([
@@ -92,7 +92,7 @@ function App() {
           />
         </Routes>
       </div>
-      <h1>{data} Data</h1>
+      <h1>{data[0].value} Data</h1>
       <div
         style={{
           display: "flex",
