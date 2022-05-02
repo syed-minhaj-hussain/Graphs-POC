@@ -14,8 +14,8 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("message", (event) => {
-      console.log({ event }, event.origin);
-      setOrigin(event.origin);
+      console.log({ event }, event.data);
+      setOrigin(event.data);
     });
     // document.addEventListener("load", (event) => {
     //   console.log(event);
