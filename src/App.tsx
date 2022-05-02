@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ReachrtsPOC } from "./recharts/ReachartsPOC";
 import Visx from "./visx";
 import ParentSize from "@visx/responsive/lib/components/ParentSize";
@@ -9,6 +10,12 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   const [selected, setSelected] = useState("1m");
   const contextValue = useValue();
+
+  useEffect(() => {
+    window.addEventListener("message", (event) => {
+      console.log({ event });
+    });
+  });
 
   return (
     <div className="App">
