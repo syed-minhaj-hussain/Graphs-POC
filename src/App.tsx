@@ -10,11 +10,16 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   const [selected, setSelected] = useState("1m");
   const contextValue = useValue();
+  const [origin, setOrigin] = useState("Nothing");
 
   useEffect(() => {
-    window.addEventListener("load", (event) => {
-      console.log({ event });
+    window.addEventListener("message", (event) => {
+      console.log({ event }, event.origin);
+      setOrigin(event.origin);
     });
+    // document.addEventListener("load", (event) => {
+    //   console.log(event);
+    // });
   });
 
   return (
@@ -37,7 +42,7 @@ function App() {
             element={
               <div>
                 <h2>Design</h2>
-                <img src={FigmaImage} width={300} height={200} />
+                <img src={FigmaImage} width={300} height={200} alt="img" />
               </div>
             }
           />
@@ -50,6 +55,7 @@ function App() {
           />
         </Routes>
       </div>
+      <h1>{origin}</h1>
       <div
         style={{
           display: "flex",
