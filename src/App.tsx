@@ -7,22 +7,57 @@ import { useState } from "react";
 import { useValue } from "./context/ValueContext";
 import { Route, Routes } from "react-router-dom";
 
+declare global {
+  interface Window {
+    ReactNativeWebView?: {
+      postMessage: (data: string) => void;
+    };
+  }
+}
+// function getInjectableJSMessage(message: Data[]) {
+//   const event = new CustomEvent("nativeAppEvent", {
+//     detail: { navChart: JSON.stringify(message) },
+//   });
+//   document.dispatchEvent(event);
+// }
+
+interface Data {
+  date: string;
+  value: string;
+}
+
 function App() {
   const [selected, setSelected] = useState("1m");
   const contextValue = useValue();
   const [origin, setOrigin] = useState("Nothing");
+  const [data, setData] = useState<Data[] | undefined>(undefined);
 
   useEffect(() => {
-    window.addEventListener("message", (event) => {
-      console.log({ event }, event.data);
-      setOrigin(event.data.message);
-      alert(event.data);
+    document.addEventListener("nativeAppEvent", (event) => {
+      const myEvent = event as CustomEvent<any>;
+      console.log({ myEvent });
+      const data = myEvent.detail.navChart;
+      console.log(data);
+      setData(data);
+      alert(JSON.stringify(myEvent.detail));
     });
 
-    // document.addEventListener("load", (event) => {
-    //   console.log(event);
-    // });
-  });
+    // getInjectableJSMessage([
+    //   {
+    //     date: "2022-01-03",
+    //     value: "188.57",
+    //   },
+    // ]);
+
+    console.log({ data });
+    window.ReactNativeWebView?.postMessage(
+      JSON.stringify({
+        name: "webview-loaded",
+      })
+    );
+  }, [data]);
+
+  console.log({ data });
 
   return (
     <div className="App">
@@ -48,7 +83,7 @@ function App() {
               </div>
             }
           />
-          <Route path="/recharts" element={<ReachrtsPOC />} />
+          <Route path="/recharts" element={<ReachrtsPOC data={data} />} />
           <Route
             path="/visx"
             element={
@@ -57,7 +92,7 @@ function App() {
           />
         </Routes>
       </div>
-      <h1>{origin}</h1>
+      <h1>{data} Data</h1>
       <div
         style={{
           display: "flex",
